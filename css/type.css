@@ -1,0 +1,60 @@
+html { 	font-size: 62.5%%; }
+body {
+	font-family: Century, arial, serif;
+	max-width: 800px;
+	min-width: 450px;
+	margin: 0 auto;	
+}
+.ff-pictos {font-family: "Pictos Custom";}
+section, nav { 
+	padding: 0 30px;
+	font-size: 16px; font-size: 1.6rem;
+}
+small { 
+	display: block; 
+	font-size: 14px; font-size: 1.4rem;
+}
+nav {  padding-top: 30px; }
+a { text-decoration: none; color: #D40408; }
+a:hover {color: #bbb;}
+h1 { font-size: 3.2em; font-size: 3.2rem;  }
+h2 { border-bottom: dotted 1px #bbb; }
+h1, h2, h3, h4, h5, h6 { margin: 0; font-weight: normal;}
+
+h1 + h4 {margin-top: 0;}
+h2, h2 > a { 
+	padding: 24px 0 0; 
+	color: #000;
+}
+h2 > a:after {
+	font-size: 16px; font-size: 1.6rem;
+	content: "d";
+	font-family: "Pictos Custom";
+	padding-left: 10px;
+}
+h2 > a[name=Personal]:after { content: "u"; }
+h4 { margin: 8px 0 0; }
+ul, li, p { 
+	margin: 0; 
+	padding: 0; 
+}
+ul { margin: 10px 0 0 0; }
+li { 
+	list-style: none; 
+	margin: 0 0 18px 25px;
+}
+ul.normal li {
+	list-style: disc;
+	padding: 0;
+	margin: 0 0 0 25px;
+}
+footer { margin: 40px 0 20px 0; }
+footer li { 
+	display: inline-block; 
+	border-top: 1px dotted #bbb;
+	padding: 0 0 0 25px;
+	margin: 0;
+	font-size: 14px;
+	font-size: 1.4rem;
+}
+footer ul { text-align: center; }

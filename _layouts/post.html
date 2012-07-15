@@ -1,0 +1,13 @@
+---
+layout: default-post
+---
+
+
+
+<section class="post">
+	<h2 class="post-header">{{ page.title }} <small>(published {{ page.date | date_to_string }})</small></h2>
+	<article class="post-content">
+		<img src="{{ page.image }}"/>
+	  	{{ content }}
+	</article>
+</section>

@@ -1,1 +1,17 @@
-My git hub page
+---
+layout: default
+---
+
+<section>
+	<p>copying templates over, and testing </p>
+	<h4 class="ff-oxy">Recent Posts</h4>
+	<ul>
+		{% for post in site.posts %}
+  		<li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
+		{% endfor %}
+	</ul>
+</section>
+
+<!--h3><a href="{% if paginator.previous_page == 1 %} / {% else %} /page{{ paginator.previous_page }} {% endif %}">newer posts</a></h3>
+<h3><a href="/page{{ paginator.next_page }}/">older posts</a></h3-->
+

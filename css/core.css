@@ -140,3 +140,14 @@ a.lowest { font-size: 10px; font-size: 1.0rem;}
 	80% { opacity: 0; }
     100% { opacity: 0; }
 }
+
+/* Browser Fixes */
+.box-fix:before,
+.box-fix:after {
+    content: "\0020";
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+.box-fix:after { clear: both; }
+.box-fix { zoom: 1; }

@@ -1,0 +1,14 @@
+/** 
+	INPUT SKINNING
+	*not(#foo), for filtering out =< IE8
+**/
+
+/**
+	INITIALIZE SKIN
+**/
+li:not(#foo) > input[type=radio] + label,
+li:not(#foo) > input[type=checkbox] + label { 
+	/*background-image: url(/imgs/sprite-ui-controls-subset.png);*/
+	background-image: url(../imgs/sprite-ui-controls-subset.png);
+	background-repeat: no-repeat;
+}

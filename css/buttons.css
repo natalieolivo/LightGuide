@@ -1,0 +1,95 @@
+/******
+	Standard Buttons
+	TODO: Check in IE
+*******/
+
+/* stripping native engine styles, FF, Chrome */
+button { 
+	background: none;
+	border: none;
+	padding: 0;
+}
+
+a.button { text-decoration: none; }
+input.button { 
+	margin: 0; 
+	padding: 0;
+}
+
+button, 
+.button {
+	font-size: 11px;
+	font-family: arial, sans serif;
+	color: #000;
+	border: solid 1px #ccc;
+	cursor: pointer;
+	min-width: 100px;
+	display: inline-block;
+	text-align: center;
+	/* TODO: lookup what this does exactly */
+	/* normalize box below for all elements */
+	box-sizing: content-box;
+		-moz-box-sizing: content-box;
+		-webkit-box-sizing: content-box;
+	/* keep height and line-height synced vertically align text */
+	height: 2em;
+	line-height: 2em;
+	vertical-align: middle;
+}
+
+/******** 
+	ENLARGE BUTTONS
+	TODO: figure out how to add vertical space for buttons with text 16px and higher;
+*******/
+button.enlarge,
+.button.enlarge { 
+	font-size: 16px; 
+	min-width: 125px;
+}
+
+
+button::-moz-focus-inner, 
+*.button::-moz-focus-inner {
+	/* strip inner vertical spacing for <input> in Mozilla */
+    border: 0 !important;
+    padding: 0 !important;
+}
+
+/* end stripping native */
+
+/******
+	Simple Button, Structural Box, Skin, Hover and Press Down States
+*******/
+button,
+.button {
+	/* vertical/horizontal padding does not work for <input> in mozilla, webkit */
+	background: #eee;
+	padding: 0 .5em;
+}
+
+/*TODO: What if box-shadow is not supported? Can we use classes to download images for just the older browsers?
+In other words, will the following be a request even if .ie class does not exist?? :
+.ie .button { background: url(/sprite.png); }
+*/
+button:hover,
+.button:hover { box-shadow: 0 2px 4px -1px rgba(0, 0, 0, .2);}
+
+button:active,
+.button:active { background: rgba(50%, 50%, 50%, .2);}
+
+button.disabled, 
+.button.disabled,
+button[disabled], 
+*[disabled].button {
+    background-image: none !important;
+    background: #CDCECE !important;
+    border-style: solid !important;
+    border-color: #AAAAAA !important;
+    cursor: default !important;
+    color: #888 !important;
+    text-shadow: none !important;
+}
+button.disabled:hover, 
+.button.disabled:hover,
+button[disabled]:hover, 
+*[disabled].button:hover { box-shadow: none; }

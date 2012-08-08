@@ -1,0 +1,122 @@
+---
+layout: default
+---
+
+<!-- TODO: Load stylesheets based on theme chosen -->
+<link rel="stylesheet" type="text/css" href="css/buttons.css">
+<link rel="stylesheet" type="text/css" href="css/forms.css">
+<link rel="stylesheet" type="text/css" href="css/forms-bn-skin.css">
+<link rel="stylesheet" type="text/css" href="css/errors.css">
+
+
+<section>
+
+	<h1>Standard Action Buttons <em>Small</em></h1>
+
+	<button type="submit">Buy Now</button>
+	<a href="" class="button">Download Now</a>
+	<span class="button">Add to Bag</span>
+	<input type="submit" class="button" value="Add to Library" />
+	<input type="submit" class="button disabled" value="Add to Library" />
+
+	<h1>Standard Action Buttons <em>Large</em></h1>
+	
+	<button type="submit" class="enlarge">Buy Now</button>
+	<a href="" class="button enlarge">Download Now</a>
+	<span class="button enlarge">Add to Bag</span>
+	<input type="submit" class="button enlarge" value="Add to Library" />
+	<input type="submit" class="button enlarge disabled" value="Add to Library" />
+
+	<h1>Form Elements</h1>
+	<form action="/">
+		<section class="errors box-fix">
+			<div>
+				<p>This is broad standard errors text</p>
+				<span>This is the first errors line</span>
+				<span>This is the second errors line</span>
+			</div>
+		</section>
+		<fieldset>
+			<label>Enter something in here:</label>
+			<input type="text" placeholder="default text" />
+			
+			<label>This has an error:</label>
+			<input type="text" class="errors" value="sample error" />
+
+			<label>Enter a little more than usual:</label>
+			<textarea>This is a text area</textarea>
+			
+			<label>This has an error:</label>
+			<textarea class="errors">This is a text area with an error</textarea>
+			<select>
+				<option>one</option>
+				<option>two</option>
+				<option>three</option>
+			</select>
+			<select class="errors">
+				<option>one error</option>
+				<option>two error</option>
+				<option>three error</option>
+			</select>
+		</fieldset>
+
+		<fieldset>
+			<ul>
+				<li>
+					<input type="radio" name="group1" value="1">
+					<label>First Choice</label>
+				</li>
+				<li>
+					<input type="radio" name="group1" value="2">
+					<label>Second Choice</label>
+				</li>
+				<li>
+					<input class="errors" type="radio" name="group1" value="2">
+					<label>Third Choice with Error</label>
+				</li>
+			</ul>
+		</fieldset>
+
+		<fieldset>
+			<ul>
+				<li>
+					<input type="checkbox" value="Yes I do" />
+					<label>First Option</label>
+				</li>
+				<li>
+					<input type="checkbox" value="Yes I do again" />
+					<label>Second Option</label>
+				</li>
+				<li>
+					<input class="errors" type="checkbox" value="Yes I do again" />
+					<label>Third Option with error</label>
+				</li>
+			</ul>
+		</fieldset>
+	</form>
+</section>
+
+
+<!-- SAMPLE HTML OFF BNSITE (radio buttons)
+
+	<fieldset class="delivery-preferences selectionitems" id="yui_3_5_1_1_1344441865169_1234">
+		<div class="error-box hidden no-box"></div>
+		<legend id="yui_3_5_1_1_1344441865169_2429">Choose Delivery Preference:</legend>
+		<ul id="yui_3_5_1_1_1344441865169_2431">
+	    	<li id="yui_3_5_1_1_1344441865169_2430">
+				<div class="yui3-widget styledinput styledradiobutton " id="yui_3_5_1_1_1344441865169_687" style="">
+				<div class="styledinput-display styledradiobutton-display styledradiobutton-selected" id="yui_3_5_1_1_1344441865169_688"></div>
+					<input type="radio" name="shippingpreference-separately-1" id="shippingpreference-separately-1" value="false" checked="" data-bntrack="shipTogether" class="styledinput-content styledradiobutton-content" data-bn-shipment-id="1">
+				</div>
+				<label for="shippingpreference-separately-1" id="yui_3_5_1_1_1344441865169_2432">Send everything in as few packages as possible. (This is required for <b class="strong">FREE Shipping</b> - <a href="javascript:void(0)" class="detailsTriggerShipmentBN" data-bntrack="shipDetails">Details</a>)</label>
+			</li>
+	    	<li>
+				<div class="yui3-widget styledinput styledradiobutton " id="yui_3_5_1_1_1344441865169_744" style="">
+				<div class="styledinput-display styledradiobutton-display " id="yui_3_5_1_1_1344441865169_745"></div>
+					<input type="radio" name="shippingpreference-separately-1" id="shippingpreference-separately-1" value="true" data-bntrack="shipAvailable" class="styledinput-content styledradiobutton-content" data-bn-shipment-id="1">
+				</div>
+				<label for="shippingpreference-separately-1">Send each item as it is available. (At additional cost - <a href="javascript:void(0)" class="detailsTriggerShipmentBN" data-bntrack="shipDetails">Details</a>)</label>
+			</li>
+		</ul>
+	</fieldset>
+-->

@@ -1,0 +1,21 @@
+/******
+	Standard Errors
+	TODO: Check in IE
+*******/
+
+section.errors {
+	border: solid 2px #f7acac;
+	color: #D82323;
+	margin: 10px 0;
+	border-radius: 6px;
+}
+
+section.errors > div { 
+	/*background: #ffe8e8;*/
+	background: #fff;
+	padding: 10px;
+	margin: 2px;
+}
+section.errors p {
+	margin: 0;
+}

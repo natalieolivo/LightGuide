@@ -1,0 +1,67 @@
+/******
+	Standard Form Elements
+	TODO: Check in IE
+*******/
+fieldset { border: 0; }
+input[type='text'] { 
+	font-size: 12px;
+	border: solid 1px #ccc;
+	height: 2em;
+	padding: 1em 0;
+	min-width: 200px; 
+}
+
+/* trouble here, psuedo elements (generated content) is not supported
+for most browsers for inputs, since they are not container elements 
+input[type='radio']:before {
+	content: 'ddd';
+	display: block;
+	color: transparent;
+	height: 12px;
+	width: 10px;
+}*/
+
+/**
+	INITIALIZE INPUTS
+**/
+
+li:not(#foo) { position: relative; }
+
+li:not(#foo) > input[type=radio],
+li:not(#foo) > input[type=checkbox] {
+	height: 16px;
+	width: 16px;
+	position: absolute;
+	left: 0;
+	opacity: 0;
+}
+
+/**
+	INACTIVE INPUT STATES
+	*not(#foo), for filtering out =< IE8
+**/
+
+li:not(#foo) > input[type=radio] + label {
+    background-position: 0 -23px;
+    height: 16px;
+    padding: 0 0 0 18px;
+}
+li:not(#foo) > input[type=checkbox] + label {
+	background-position: 0 -85px;
+	height: 12px;
+	overflow: hidden;
+	width: 12px;
+	padding-left: 18px;
+}
+
+/**
+	ACTIVE INPUT STATES
+	*not(#foo), for filtering out =< IE8
+	TODO: Look at the states when the page refreshes. It should clear but it looks like
+	the checked state is cached in FF but cleared in chrome
+**/
+li:not(#foo) > input[type=radio]:checked + label { background-position: 0 -3px; }
+li:not(#foo) > input[type=checkbox]:checked + label { background-position: 0 -109px; }
+
+
+/** DISABLED STATES ??? **/

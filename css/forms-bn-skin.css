@@ -4,11 +4,29 @@
 **/
 
 /**
-	INITIALIZE SKIN
+	INITIALIZE INPUT SKIN
 **/
 li:not(#foo) > input[type=radio] + label,
 li:not(#foo) > input[type=checkbox] + label { 
 	/*background-image: url(/imgs/sprite-ui-controls-subset.png);*/
 	background-image: url(../imgs/sprite-ui-controls-subset.png);
 	background-repeat: no-repeat;
+}
+/**
+	INITIALIZE SELECT SKIN
+**/
+.styledselect { 
+	width: 400px; 
+	position: relative; 
+	border: solid 1px #969694;
+}
+.styledselect:after { 
+	content: '';
+	width: 10px;
+	height: 10px;
+	background: red;
+	display: block;
+	position: absolute;
+	top: 0;
+	right: 0;
 }

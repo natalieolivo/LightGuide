@@ -34,20 +34,21 @@ li:not(#foo) > input[type=checkbox] {
 	position: absolute;
 	left: 0;
 	opacity: 0;
+	cursor: pointer;
 }
 
 /**
-	INACTIVE INPUT STATES
+	NORMAL INPUT STATES
 	*not(#foo), for filtering out =< IE8
 **/
 
 li:not(#foo) > input[type=radio] + label {
-    background-position: 0 -23px;
+    background-position: 0 -22px;
     height: 16px;
     padding: 0 0 0 18px;
 }
 li:not(#foo) > input[type=checkbox] + label {
-	background-position: 0 -85px;
+	background-position: 0 -223px;
 	height: 12px;
 	overflow: hidden;
 	width: 12px;
@@ -55,13 +56,63 @@ li:not(#foo) > input[type=checkbox] + label {
 }
 
 /**
-	ACTIVE INPUT STATES
+	:CHECKED INPUT STATES
 	*not(#foo), for filtering out =< IE8
 	TODO: Look at the states when the page refreshes. It should clear but it looks like
 	the checked state is cached in FF but cleared in chrome
+	TODO: make sure selected states are represented
 **/
-li:not(#foo) > input[type=radio]:checked + label { background-position: 0 -3px; }
-li:not(#foo) > input[type=checkbox]:checked + label { background-position: 0 -109px; }
+li:not(#foo) > input[type=radio]:checked + label { background-position: 0 -2px; }
+li:not(#foo) > input[type=checkbox]:checked + label { background-position: 0 -202px; }
 
+/**
+	:HOVER AND :FOCUS STATES
+**/
+li:not(#foo) > input[type=radio]:focus + label,
+li:not(#foo) > input[type=radio]:hover + label { background-position: 0 -42px; }
 
-/** DISABLED STATES ??? **/
+li:not(#foo) > input[type=radio]:focus:checked + label,
+li:not(#foo) > input[type=radio]:hover:checked + label { background-position: 0 -63px; }
+
+li:not(#foo) > input[type=checkbox]:focus + label,
+li:not(#foo) > input[type=checkbox]:hover + label { background-position: 0 -263px; }
+
+li:not(#foo) > input[type=checkbox]:focus:checked + label,
+li:not(#foo) > input[type=checkbox]:hover:checked + label { background-position: 0 -242px; }
+
+/**
+	:ACTIVE (PRESS) STATES
+**/
+li:not(#foo) > input[type=radio]:active + label { background-position: 0 -82px; }
+li:not(#foo) > input[type=checkbox]:active + label { background-position: 0 -302px; }
+
+li:not(#foo) > input[type=radio]:active:checked + label { background-position: 0 -104px; }
+li:not(#foo) > input[type=checkbox]:active:checked + label { background-position: 0 -282px; }
+
+/** :DISABLED INPUT STATES **/
+li:not(#foo) > input[type=radio]:disabled + label { background-position: 0 -183px;}
+li:not(#foo) > input[type=checkbox]:disabled + label { background-position: 0 -379px;}
+li:not(#foo) > input[type=radio]:disabled:checked + label { background-position: 0 -163px;}
+li:not(#foo) > input[type=checkbox]:disabled:checked + label { background-position: 0 -359px;}
+
+/**
+	ERROR STATES
+**/
+li:not(#foo) > input[type=radio].error + label { background-position: 0 -142px; }
+li:not(#foo) > input[type=radio].error:checked + label { background-position: 0 -123px; }
+li:not(#foo) > input[type=checkbox].error + label { background-position: 0 -341px; }
+li:not(#foo) > input[type=checkbox].error:checked + label { background-position: 0 -321px; }
+
+/**
+	INITIALIZE SELECT BOXES
+**/
+.styledselect select { 
+	border: none;
+	-webkit-appearance: none;
+	width: inherit;
+
+}
+.styledselect select option { 
+	background-clip: border-box; 
+	padding: 0;
+}

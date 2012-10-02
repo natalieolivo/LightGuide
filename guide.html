@@ -48,31 +48,35 @@ layout: default
 			
 			<label>This has an error:</label>
 			<textarea class="errors">This is a text area with an error</textarea>
-			<select>
-				<option>one</option>
-				<option>two</option>
-				<option>three</option>
-			</select>
-			<select class="errors">
-				<option>one error</option>
-				<option>two error</option>
-				<option>three error</option>
-			</select>
+			<div class="styledselect">
+				<select>
+					<option>one</option>
+					<option>two</option>
+					<option>three</option>
+				</select>
+			</div>
+			<div class="styledselect">
+				<select class="errors">
+					<option>one error</option>
+					<option>two error</option>
+					<option>three error</option>
+				</select>
+			</div>
 		</fieldset>
 
 		<fieldset>
 			<ul>
 				<li>
-					<input type="radio" name="group1" value="1">
-					<label>First Choice</label>
+					<input id="first" type="radio" name="group1" value="1">
+					<label for="first">First Choice</label>
 				</li>
 				<li>
-					<input type="radio" name="group1" value="2">
-					<label>Second Choice</label>
+					<input id="second" type="radio" name="group1" value="2">
+					<label for="second">Second Choice</label>
 				</li>
 				<li>
-					<input class="errors" type="radio" name="group1" value="2">
-					<label>Third Choice with Error</label>
+					<input id="third" class="error" type="radio" name="group1" value="2">
+					<label for="third">Third Choice with Error</label>
 				</li>
 			</ul>
 		</fieldset>
@@ -80,16 +84,16 @@ layout: default
 		<fieldset>
 			<ul>
 				<li>
-					<input type="checkbox" value="Yes I do" />
-					<label>First Option</label>
+					<input id="yesOption" type="checkbox" value="Yes I do" />
+					<label for="yesOption">First Option</label>
 				</li>
 				<li>
-					<input type="checkbox" value="Yes I do again" />
-					<label>Second Option</label>
+					<input id="noOption" type="checkbox" value="No I dont" />
+					<label for="noOption">Second Option</label>
 				</li>
 				<li>
-					<input class="errors" type="checkbox" value="Yes I do again" />
-					<label>Third Option with error</label>
+					<input id="errorOption" class="error" type="checkbox" value="Yes I do again" />
+					<label for="errorOption">Third Option with error</label>
 				</li>
 			</ul>
 		</fieldset>
